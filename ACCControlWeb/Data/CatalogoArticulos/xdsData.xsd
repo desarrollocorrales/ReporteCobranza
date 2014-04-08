@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="xdsData" targetNamespace="http://tempuri.org/xdsData.xsd" xmlns:mstns="http://tempuri.org/xdsData.xsd" xmlns="http://tempuri.org/xdsData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="xdsData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="xdsData" msprop:Generator_UserDSName="xdsData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtClavesArticulo" msprop:Generator_TableClassName="dtClavesArticuloDataTable" msprop:Generator_TableVarName="tabledtClavesArticulo" msprop:Generator_TablePropName="dtClavesArticulo" msprop:Generator_RowDeletingName="dtClavesArticuloRowDeleting" msprop:Generator_UserTableName="dtClavesArticulo" msprop:Generator_RowChangingName="dtClavesArticuloRowChanging" msprop:Generator_RowEvHandlerName="dtClavesArticuloRowChangeEventHandler" msprop:Generator_RowDeletedName="dtClavesArticuloRowDeleted" msprop:Generator_RowEvArgName="dtClavesArticuloRowChangeEvent" msprop:Generator_RowChangedName="dtClavesArticuloRowChanged" msprop:Generator_RowClassName="dtClavesArticuloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="clave_articulo_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnclave_articulo_id" msprop:Generator_ColumnPropNameInRow="clave_articulo_id" msprop:Generator_ColumnPropNameInTable="clave_articulo_idColumn" msprop:Generator_UserColumnName="clave_articulo_id" type="xs:int" />
+              <xs:element name="clave" msprop:Generator_ColumnVarNameInTable="columnclave" msprop:Generator_ColumnPropNameInRow="clave" msprop:Generator_ColumnPropNameInTable="claveColumn" msprop:Generator_UserColumnName="clave" type="xs:string" minOccurs="0" />
+              <xs:element name="rol_id" msprop:Generator_ColumnVarNameInTable="columnrol_id" msprop:Generator_ColumnPropNameInRow="rol_id" msprop:Generator_ColumnPropNameInTable="rol_idColumn" msprop:Generator_UserColumnName="rol_id" type="xs:int" minOccurs="0" />
+              <xs:element name="rowversion" msprop:Generator_ColumnVarNameInTable="columnrowversion" msprop:Generator_ColumnPropNameInRow="rowversion" msprop:Generator_ColumnPropNameInTable="rowversionColumn" msprop:Generator_UserColumnName="rowversion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtPreciosArticulo" msprop:Generator_TableClassName="dtPreciosArticuloDataTable" msprop:Generator_TableVarName="tabledtPreciosArticulo" msprop:Generator_TablePropName="dtPreciosArticulo" msprop:Generator_RowDeletingName="dtPreciosArticuloRowDeleting" msprop:Generator_UserTableName="dtPreciosArticulo" msprop:Generator_RowChangingName="dtPreciosArticuloRowChanging" msprop:Generator_RowEvHandlerName="dtPreciosArticuloRowChangeEventHandler" msprop:Generator_RowDeletedName="dtPreciosArticuloRowDeleted" msprop:Generator_RowEvArgName="dtPreciosArticuloRowChangeEvent" msprop:Generator_RowChangedName="dtPreciosArticuloRowChanged" msprop:Generator_RowClassName="dtPreciosArticuloRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="precio_articulo_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnprecio_articulo_id" msprop:Generator_ColumnPropNameInRow="precio_articulo_id" msprop:Generator_ColumnPropNameInTable="precio_articulo_idColumn" msprop:Generator_UserColumnName="precio_articulo_id" type="xs:int" />
+              <xs:element name="precio_empresa" msdata:Caption="precio_empresa_id" msprop:Generator_ColumnVarNameInTable="columnprecio_empresa" msprop:Generator_ColumnPropNameInRow="precio_empresa" msprop:Generator_ColumnPropNameInTable="precio_empresaColumn" msprop:Generator_UserColumnName="precio_empresa" type="xs:string" minOccurs="0" />
+              <xs:element name="precio_venta" msprop:Generator_ColumnVarNameInTable="columnprecio_venta" msprop:Generator_ColumnPropNameInRow="precio_venta" msprop:Generator_ColumnPropNameInTable="precio_ventaColumn" msprop:Generator_UserColumnName="precio_venta" type="xs:double" minOccurs="0" />
+              <xs:element name="moneda" msprop:Generator_ColumnVarNameInTable="columnmoneda" msprop:Generator_ColumnPropNameInRow="moneda" msprop:Generator_ColumnPropNameInTable="monedaColumn" msprop:Generator_UserColumnName="moneda" type="xs:string" minOccurs="0" />
+              <xs:element name="margen" msprop:Generator_ColumnVarNameInTable="columnmargen" msprop:Generator_ColumnPropNameInRow="margen" msprop:Generator_ColumnPropNameInTable="margenColumn" msprop:Generator_UserColumnName="margen" type="xs:float" minOccurs="0" />
+              <xs:element name="rowversion" msprop:Generator_ColumnVarNameInTable="columnrowversion" msprop:Generator_ColumnPropNameInRow="rowversion" msprop:Generator_ColumnPropNameInTable="rowversionColumn" msprop:Generator_UserColumnName="rowversion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dtImpuestos" msprop:Generator_TableClassName="dtImpuestosDataTable" msprop:Generator_TableVarName="tabledtImpuestos" msprop:Generator_TablePropName="dtImpuestos" msprop:Generator_RowDeletingName="dtImpuestosRowDeleting" msprop:Generator_UserTableName="dtImpuestos" msprop:Generator_RowChangingName="dtImpuestosRowChanging" msprop:Generator_RowEvHandlerName="dtImpuestosRowChangeEventHandler" msprop:Generator_RowDeletedName="dtImpuestosRowDeleted" msprop:Generator_RowEvArgName="dtImpuestosRowChangeEvent" msprop:Generator_RowChangedName="dtImpuestosRowChanged" msprop:Generator_RowClassName="dtImpuestosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="impuesto_articulo_id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msdata:Caption="id" msprop:Generator_ColumnVarNameInTable="columnimpuesto_articulo_id" msprop:Generator_ColumnPropNameInRow="impuesto_articulo_id" msprop:Generator_ColumnPropNameInTable="impuesto_articulo_idColumn" msprop:Generator_UserColumnName="impuesto_articulo_id" type="xs:int" />
+              <xs:element name="impuesto_id" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnimpuesto_id" msprop:Generator_ColumnPropNameInRow="impuesto_id" msprop:Generator_ColumnPropNameInTable="impuesto_idColumn" msprop:Generator_UserColumnName="impuesto_id" type="xs:int" minOccurs="0" />
+              <xs:element name="nombre" msprop:Generator_ColumnVarNameInTable="columnnombre" msprop:Generator_ColumnPropNameInRow="nombre" msprop:Generator_ColumnPropNameInTable="nombreColumn" msprop:Generator_UserColumnName="nombre" type="xs:string" minOccurs="0" />
+              <xs:element name="rowversion" msprop:Generator_ColumnVarNameInTable="columnrowversion" msprop:Generator_ColumnPropNameInRow="rowversion" msprop:Generator_ColumnPropNameInTable="rowversionColumn" msprop:Generator_UserColumnName="rowversion" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="dtClavesArticuloKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtClavesArticulo" />
+      <xs:field xpath="mstns:clave_articulo_id" />
+    </xs:unique>
+    <xs:unique name="dtPreciosArticuloKey1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtPreciosArticulo" />
+      <xs:field xpath="mstns:precio_articulo_id" />
+    </xs:unique>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:dtImpuestos" />
+      <xs:field xpath="mstns:impuesto_articulo_id" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

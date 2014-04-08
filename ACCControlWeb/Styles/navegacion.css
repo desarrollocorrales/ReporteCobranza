@@ -1,0 +1,166 @@
+﻿/* DEVEXPRESS CSS
+----------------------------------------------------------*/
+
+.aspxpvCliente
+{
+   width: 200px; 
+   max-width: 200px; 
+   min-width: 200px; 		
+}
+
+.aspxpvVence
+{
+   width: 100px; 
+   max-width: 100px; 
+   min-width: 100px; 				
+}
+
+/* NAVEGACION
+----------------------------------------------------------*/
+
+html, body {
+        height:auto !important; /* FF and compliant browsers should automatically size the body/html */
+        height:100%; /* ie will set the body/html to 100%, anything overflowing that will (incorrectly) resize it. go IE */
+        min-height:100%; /* when FF/etc automatically size the body/html it should be AT LEAST the height of the entire browser window, but can expand based on content. */
+        margin:0px;
+}
+
+#wrapper
+{
+	width:100%;
+	height:100%;
+	padding: 0px;
+	margin:0px;
+	border-color:Black;
+	position:absolute;		
+}
+
+#encabezado
+{
+	margin:0px;
+	width:100%;
+	height:10%;
+}
+
+#dataArea
+{
+
+	float:right;
+	padding:0px;
+	margin:0px;
+	width:80%;
+	height:90%;
+}
+
+#menu
+{
+
+     padding:0px;
+     height:5%;
+    
+}
+
+#navegacion
+{
+
+	float:left;
+	width:20%;
+	margin:0px;
+	height:80%;
+	padding:0px;
+	/*padding-top:30px;*/
+	
+}
+
+.seccion 
+{    
+    margin-bottom:10px;           
+}
+
+.rightInput
+{
+    float:right;        
+}
+
+#Seccion1
+{
+    width:50%;        
+}
+
+#Seccion2
+{
+
+    width:100%;
+    
+}
+
+#Seccion4
+{
+    width:100%;
+        
+}
+
+.SubSeccion1
+{
+    height:130px;    
+    width:35%;
+}
+
+.SubSeccion2
+{
+    height:130px;
+    overflow:auto;    
+    width:55%;
+}
+
+#Seccion3
+{
+    width:100%;        
+}
+
+
+.inputdiv {
+
+    float:left;
+    margin-left:5px;
+    margin-right:5px;
+}
+
+.labeldiv {
+    float:left;
+    margin-left:5px;
+    margin-right:5px;                    
+    width:110px;
+}
+
+.clearinputdiv
+{
+
+    clear:both;
+        
+}
+
+#btnClearGrupos
+{
+
+    float:left;
+    
+}
+
+ #pie
+ { 
+	clear:both; 	
+ }
+ 
+ .customvalid
+ {
+     border-style:dashed;
+     border-width:1px;
+     border-bottom:1px;
+     border-top:0px;
+     border-left:0px;
+     border-right:0px;          
+     font-family:Calibri;
+     font-size:small;
+     color:Red;                       
+ }

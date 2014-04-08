@@ -1,0 +1,1534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{99EBC6DF-7951-4A4F-AFA0-C0B8486B5679}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ACCControlWeb</RootNamespace>
+    <AssemblyName>ACCControlWeb</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <FilesToIncludeForPublish>AllFilesInTheProject</FilesToIncludeForPublish>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ExcludeGeneratedDebugSymbol>true</ExcludeGeneratedDebugSymbol>
+    <DeployIisAppPath>Default Web Site/ACCControl/Web_deploy</DeployIisAppPath>
+    <IncludeIisSettings>false</IncludeIisSettings>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+    <DeployIisAppPhysicalPath>C:\Users\Ever\Documents\Visual Studio 2010\Projects\ACCControlWeb\ACCControl\Web_deploy</DeployIisAppPhysicalPath>
+    <PackageAsSingleFile>true</PackageAsSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AccBusinessLayer">
+      <HintPath>..\..\BusinessLayer\AccBusinessLayer\bin\Release\AccBusinessLayer.dll</HintPath>
+      <Private>True</Private>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="BusinessLayerRoot">
+      <HintPath>..\..\BusinessLayer\BusinessLayerRoot\bin\Release\BusinessLayerRoot.dll</HintPath>
+    </Reference>
+    <Reference Include="CommonControls">
+      <HintPath>..\..\CommonControls\bin\Release\CommonControls.dll</HintPath>
+    </Reference>
+    <Reference Include="ControlBusinessLayer">
+      <HintPath>..\..\BusinessLayer\ControlBusinessLayer\bin\Release\ControlBusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v10.2.Core, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxEditors.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxGridView.v10.2.Export, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v10.2.Export, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPivotGrid.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="FIREBIRD">
+      <HintPath>..\..\Libraries\SQL\FIREBIRD\bin\Release\FIREBIRD.dll</HintPath>
+    </Reference>
+    <Reference Include="FirebirdSql.Data.FirebirdClient, Version=2.6.5.0, Culture=neutral, PublicKeyToken=3750abcc3150b00c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\Program Files\FirebirdClient\FirebirdSql.Data.FirebirdClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MicroSipBusinessLayer">
+      <HintPath>..\..\BusinessLayer\MicroSipBusinessLayer\bin\Release\MicroSipBusinessLayer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Desktop\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Seguridad, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libraries\SQL\Seguridad\bin\Release\Seguridad.dll</HintPath>
+    </Reference>
+    <Reference Include="SQL">
+      <HintPath>..\..\Libraries\SQL\SQL\bin\Release\SQL.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Configuration">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Services">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.EnterpriseServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Entity">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.ApplicationServices">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Utilerias">
+      <HintPath>..\..\Libraries\SQL\Utilerias\bin\Release\Utilerias.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cobranza.aspx" />
+    <Content Include="Img\Edit.ico" />
+    <Content Include="Img\Edit.png" />
+    <Content Include="loggin.aspx" />
+    <Content Include="Scripts\fixedTable\css\base.css" />
+    <Content Include="Scripts\fixedTable\highlighter\codehighlighter.js" />
+    <Content Include="Scripts\fixedTable\highlighter\html.js" />
+    <Content Include="Scripts\fixedTable\highlighter\javascript.js" />
+    <Content Include="Scripts\fixedTable\javascript\jquery.fixheadertable.js" />
+    <Content Include="Scripts\fixedTable\javascript\jquery.fixheadertable.min.js" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_flat_0_eeeeee_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_flat_55_ffffff_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_highlight-soft_100_f6f6f6_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_highlight-soft_25_0073ea_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-bg_highlight-soft_50_dddddd_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-icons_0073ea_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-icons_666666_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-icons_ff0084_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\flick\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_diagonals-small_40_db4865_40x40.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_diagonals-small_50_93c3cd_40x40.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_diagonals-small_50_ff3853_40x40.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_diagonals-small_75_ccd232_40x40.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_dots-medium_80_ffff38_4x4.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_dots-small_35_35414f_2x2.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_flat_75_ba9217_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-bg_white-lines_85_f7f7ba_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-icons_88a206_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-icons_c02669_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-icons_e1e463_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-icons_ffeb33_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\hot-sneaks\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_flat_55_fbec88_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\redmond\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\smoothness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\fixedTable\jquery-ui\css\ui-lightness\jquery-ui-1.8.4.custom.css" />
+    <Content Include="Styles\navegacion.css" />
+    <Content Include="Styles\PreciosArticulos.css" />
+    <Content Include="Styles\reset.css" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cobranza.aspx.cs">
+      <DependentUpon>Cobranza.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cobranza.aspx.designer.cs">
+      <DependentUpon>Cobranza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Conexiones\ConexionControl.cs" />
+    <Compile Include="Conexiones\ConexionFidel.cs" />
+    <Compile Include="Conexiones\ConexionFireBird.cs" />
+    <Compile Include="Conexiones\ConexionFrioGomez.cs" />
+    <Compile Include="Conexiones\ConexionFriolala.cs" />
+    <Compile Include="Conexiones\ConexionHeroico.cs" />
+    <Compile Include="Conexiones\ConexionAbastecedora.cs" />
+    <Compile Include="Conexiones\ConexionLibertad.cs" />
+    <Compile Include="Conexiones\ConexionMySql.cs" />
+    <Compile Include="Conexiones\ConexionWiner.cs" />
+    <Compile Include="ControlAcc.Master.cs">
+      <DependentUpon>ControlAcc.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlAcc.Master.designer.cs">
+      <DependentUpon>ControlAcc.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Data\CatalogoArticulos\xdsData.cs">
+      <DependentUpon>xdsData.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Data\CatalogoArticulos\xdsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>xdsData.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FG.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="loggin.aspx.cs">
+      <DependentUpon>loggin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="loggin.aspx.designer.cs">
+      <DependentUpon>loggin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="VG.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ControlAcc.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Aqua\ASPxButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDataView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLabel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxListBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMemo.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Aqua\MonthEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxButton.skin" />
+    <Content Include="App_Themes\Aqua\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Aqua\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Aqua\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Aqua\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Aqua\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxGridView.skin" />
+    <Content Include="App_Themes\Aqua\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Aqua\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Aqua\MVCxLabel.skin" />
+    <Content Include="App_Themes\Aqua\MVCxListBox.skin" />
+    <Content Include="App_Themes\Aqua\MVCxMemo.skin" />
+    <Content Include="App_Themes\Aqua\MVCxMenu.skin" />
+    <Content Include="App_Themes\Aqua\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Aqua\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Aqua\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Aqua\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Aqua\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Aqua\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Aqua\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Aqua\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Aqua\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Aqua\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Aqua\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Aqua\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Aqua\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Aqua\ReportToolbar.skin" />
+    <Content Include="App_Themes\Aqua\ReportViewer.skin" />
+    <Content Include="App_Themes\Aqua\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Aqua\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxButton.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxCalendar.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxComboBox.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxDataView.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxFileManager.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxGridView.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxHeadline.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxLabel.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxListBox.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxMemo.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxMenu.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxNavBar.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxPageControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxPager.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxScheduler.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxSplitter.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxTabControl.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxTextBox.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxTreeList.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxTreeView.skin" />
+    <Content Include="App_Themes\BlackGlass\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\BlackGlass\MonthEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxButton.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxCalendar.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxComboBox.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxGridView.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxLabel.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxListBox.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxMemo.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxMenu.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxNavBar.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxPageControl.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxSplitter.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxTabControl.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxTextBox.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\MVCxTreeView.skin" />
+    <Content Include="App_Themes\BlackGlass\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\ReportToolbar.skin" />
+    <Content Include="App_Themes\BlackGlass\ReportViewer.skin" />
+    <Content Include="App_Themes\BlackGlass\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\BlackGlass\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxButton.skin" />
+    <Content Include="App_Themes\DevEx\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCalendar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxComboBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDataView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFileManager.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\DevEx\ASPxGridView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHeadline.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\DevEx\ASPxLabel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxListBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxMemo.skin" />
+    <Content Include="App_Themes\DevEx\ASPxMenu.skin" />
+    <Content Include="App_Themes\DevEx\ASPxNavBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPageControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPager.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\DevEx\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxScheduler.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSplitter.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTabControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTextBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTreeList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTreeView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\DevEx\MonthEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxButton.skin" />
+    <Content Include="App_Themes\DevEx\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxCalendar.skin" />
+    <Content Include="App_Themes\DevEx\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\DevEx\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\DevEx\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxComboBox.skin" />
+    <Content Include="App_Themes\DevEx\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxGridView.skin" />
+    <Content Include="App_Themes\DevEx\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\DevEx\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\DevEx\MVCxLabel.skin" />
+    <Content Include="App_Themes\DevEx\MVCxListBox.skin" />
+    <Content Include="App_Themes\DevEx\MVCxMemo.skin" />
+    <Content Include="App_Themes\DevEx\MVCxMenu.skin" />
+    <Content Include="App_Themes\DevEx\MVCxNavBar.skin" />
+    <Content Include="App_Themes\DevEx\MVCxPageControl.skin" />
+    <Content Include="App_Themes\DevEx\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\DevEx\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\DevEx\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\DevEx\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\DevEx\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\DevEx\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxSplitter.skin" />
+    <Content Include="App_Themes\DevEx\MVCxTabControl.skin" />
+    <Content Include="App_Themes\DevEx\MVCxTextBox.skin" />
+    <Content Include="App_Themes\DevEx\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\DevEx\MVCxTreeView.skin" />
+    <Content Include="App_Themes\DevEx\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\DevEx\ReportToolbar.skin" />
+    <Content Include="App_Themes\DevEx\ReportViewer.skin" />
+    <Content Include="App_Themes\DevEx\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\DevEx\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxButton.skin" />
+    <Content Include="App_Themes\Glass\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Glass\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Glass\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Glass\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Glass\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Glass\ASPxDataView.skin" />
+    <Content Include="App_Themes\Glass\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Glass\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Glass\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Glass\ASPxGridView.skin" />
+    <Content Include="App_Themes\Glass\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Glass\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Glass\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Glass\ASPxLabel.skin" />
+    <Content Include="App_Themes\Glass\ASPxListBox.skin" />
+    <Content Include="App_Themes\Glass\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Glass\ASPxMemo.skin" />
+    <Content Include="App_Themes\Glass\ASPxMenu.skin" />
+    <Content Include="App_Themes\Glass\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Glass\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxPager.skin" />
+    <Content Include="App_Themes\Glass\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Glass\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Glass\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Glass\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Glass\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Glass\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Glass\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Glass\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Glass\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Glass\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Glass\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Glass\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Glass\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Glass\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Glass\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Glass\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Glass\MonthEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxButton.skin" />
+    <Content Include="App_Themes\Glass\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Glass\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Glass\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxGridView.skin" />
+    <Content Include="App_Themes\Glass\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Glass\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Glass\MVCxLabel.skin" />
+    <Content Include="App_Themes\Glass\MVCxListBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxMemo.skin" />
+    <Content Include="App_Themes\Glass\MVCxMenu.skin" />
+    <Content Include="App_Themes\Glass\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Glass\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Glass\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Glass\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Glass\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Glass\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Glass\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Glass\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Glass\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Glass\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Glass\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Glass\ReportToolbar.skin" />
+    <Content Include="App_Themes\Glass\ReportViewer.skin" />
+    <Content Include="App_Themes\Glass\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Glass\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2003Blue\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\MonthEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxButton.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxGridView.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxLabel.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxListBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxMemo.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxMenu.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Office2003Blue\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\ReportToolbar.skin" />
+    <Content Include="App_Themes\Office2003Blue\ReportViewer.skin" />
+    <Content Include="App_Themes\Office2003Blue\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Office2003Blue\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2003Olive\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\MonthEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxButton.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxGridView.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxLabel.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxListBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxMemo.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxMenu.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Office2003Olive\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\ReportToolbar.skin" />
+    <Content Include="App_Themes\Office2003Olive\ReportViewer.skin" />
+    <Content Include="App_Themes\Office2003Olive\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Office2003Olive\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2003Silver\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\MonthEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxButton.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxGridView.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxLabel.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxListBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxMemo.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxMenu.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Office2003Silver\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\ReportToolbar.skin" />
+    <Content Include="App_Themes\Office2003Silver\ReportViewer.skin" />
+    <Content Include="App_Themes\Office2003Silver\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Office2003Silver\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Black\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Office2010Black\MonthEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxButton.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxGridView.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxLabel.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxListBox.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxMemo.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxMenu.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Black\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\ReportToolbar.skin" />
+    <Content Include="App_Themes\Office2010Black\ReportViewer.skin" />
+    <Content Include="App_Themes\Office2010Black\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Office2010Black\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Blue\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\MonthEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxButton.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxGridView.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxLabel.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxListBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxMemo.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxMenu.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Blue\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\ReportToolbar.skin" />
+    <Content Include="App_Themes\Office2010Blue\ReportViewer.skin" />
+    <Content Include="App_Themes\Office2010Blue\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Office2010Blue\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxButton.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxDataView.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxGridView.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxLabel.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxListBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxMemo.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxMenu.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxPager.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Silver\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\MonthEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxButton.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxGridView.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxLabel.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxListBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxMemo.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxMenu.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Office2010Silver\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\ReportToolbar.skin" />
+    <Content Include="App_Themes\Office2010Silver\ReportViewer.skin" />
+    <Content Include="App_Themes\Office2010Silver\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Office2010Silver\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxButton.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCalendar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxComboBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDataView.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxFileManager.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxGridView.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxHeadline.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxLabel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxListBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxMemo.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxMenu.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxNavBar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPageControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPager.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxScheduler.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxSplitter.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTabControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTextBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTreeList.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxTreeView.skin" />
+    <Content Include="App_Themes\PlasticBlue\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\MonthEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxButton.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxCalendar.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxComboBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxGridView.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxLabel.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxListBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxMemo.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxMenu.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxNavBar.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxPageControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxSplitter.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxTabControl.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxTextBox.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\MVCxTreeView.skin" />
+    <Content Include="App_Themes\PlasticBlue\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\ReportToolbar.skin" />
+    <Content Include="App_Themes\PlasticBlue\ReportViewer.skin" />
+    <Content Include="App_Themes\PlasticBlue\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\PlasticBlue\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxButton.skin" />
+    <Content Include="App_Themes\RedWine\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxCalendar.skin" />
+    <Content Include="App_Themes\RedWine\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\RedWine\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\RedWine\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\RedWine\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxComboBox.skin" />
+    <Content Include="App_Themes\RedWine\ASPxDataView.skin" />
+    <Content Include="App_Themes\RedWine\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\RedWine\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxFileManager.skin" />
+    <Content Include="App_Themes\RedWine\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\RedWine\ASPxGridView.skin" />
+    <Content Include="App_Themes\RedWine\ASPxHeadline.skin" />
+    <Content Include="App_Themes\RedWine\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\RedWine\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\RedWine\ASPxLabel.skin" />
+    <Content Include="App_Themes\RedWine\ASPxListBox.skin" />
+    <Content Include="App_Themes\RedWine\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\RedWine\ASPxMemo.skin" />
+    <Content Include="App_Themes\RedWine\ASPxMenu.skin" />
+    <Content Include="App_Themes\RedWine\ASPxNavBar.skin" />
+    <Content Include="App_Themes\RedWine\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxPageControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxPager.skin" />
+    <Content Include="App_Themes\RedWine\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\RedWine\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\RedWine\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\RedWine\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\RedWine\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\RedWine\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\RedWine\ASPxScheduler.skin" />
+    <Content Include="App_Themes\RedWine\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\RedWine\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxSplitter.skin" />
+    <Content Include="App_Themes\RedWine\ASPxTabControl.skin" />
+    <Content Include="App_Themes\RedWine\ASPxTextBox.skin" />
+    <Content Include="App_Themes\RedWine\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\RedWine\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\RedWine\ASPxTreeList.skin" />
+    <Content Include="App_Themes\RedWine\ASPxTreeView.skin" />
+    <Content Include="App_Themes\RedWine\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\RedWine\MonthEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxButton.skin" />
+    <Content Include="App_Themes\RedWine\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxCalendar.skin" />
+    <Content Include="App_Themes\RedWine\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\RedWine\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\RedWine\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxComboBox.skin" />
+    <Content Include="App_Themes\RedWine\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxGridView.skin" />
+    <Content Include="App_Themes\RedWine\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\RedWine\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\RedWine\MVCxLabel.skin" />
+    <Content Include="App_Themes\RedWine\MVCxListBox.skin" />
+    <Content Include="App_Themes\RedWine\MVCxMemo.skin" />
+    <Content Include="App_Themes\RedWine\MVCxMenu.skin" />
+    <Content Include="App_Themes\RedWine\MVCxNavBar.skin" />
+    <Content Include="App_Themes\RedWine\MVCxPageControl.skin" />
+    <Content Include="App_Themes\RedWine\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\RedWine\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\RedWine\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\RedWine\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\RedWine\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\RedWine\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxSplitter.skin" />
+    <Content Include="App_Themes\RedWine\MVCxTabControl.skin" />
+    <Content Include="App_Themes\RedWine\MVCxTextBox.skin" />
+    <Content Include="App_Themes\RedWine\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\RedWine\MVCxTreeView.skin" />
+    <Content Include="App_Themes\RedWine\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\RedWine\ReportToolbar.skin" />
+    <Content Include="App_Themes\RedWine\ReportViewer.skin" />
+    <Content Include="App_Themes\RedWine\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\RedWine\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxButton.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxCalendar.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxComboBox.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxDataView.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxFileManager.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxGridView.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxHeadline.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxLabel.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxListBox.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxMemo.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxMenu.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxNavBar.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxPageControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxPager.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxScheduler.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxSplitter.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxTabControl.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxTextBox.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxTreeList.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxTreeView.skin" />
+    <Content Include="App_Themes\SoftOrange\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\SoftOrange\MonthEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxButton.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxCalendar.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxComboBox.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxGridView.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxLabel.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxListBox.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxMemo.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxMenu.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxNavBar.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxPageControl.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxSplitter.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxTabControl.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxTextBox.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\MVCxTreeView.skin" />
+    <Content Include="App_Themes\SoftOrange\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\ReportToolbar.skin" />
+    <Content Include="App_Themes\SoftOrange\ReportViewer.skin" />
+    <Content Include="App_Themes\SoftOrange\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\SoftOrange\WeekOfMonthEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxButton.skin" />
+    <Content Include="App_Themes\Youthful\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Youthful\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Youthful\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Youthful\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Youthful\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Youthful\ASPxDataView.skin" />
+    <Content Include="App_Themes\Youthful\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Youthful\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Youthful\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Youthful\ASPxGridView.skin" />
+    <Content Include="App_Themes\Youthful\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Youthful\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Youthful\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Youthful\ASPxLabel.skin" />
+    <Content Include="App_Themes\Youthful\ASPxListBox.skin" />
+    <Content Include="App_Themes\Youthful\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Youthful\ASPxMemo.skin" />
+    <Content Include="App_Themes\Youthful\ASPxMenu.skin" />
+    <Content Include="App_Themes\Youthful\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Youthful\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxPager.skin" />
+    <Content Include="App_Themes\Youthful\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Youthful\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Youthful\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Youthful\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Youthful\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Youthful\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Youthful\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Youthful\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Youthful\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Youthful\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Youthful\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Youthful\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Youthful\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Youthful\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Youthful\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Youthful\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Youthful\MonthEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxButton.skin" />
+    <Content Include="App_Themes\Youthful\MVCxButtonEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxCalendar.skin" />
+    <Content Include="App_Themes\Youthful\MVCxCallbackPanel.skin" />
+    <Content Include="App_Themes\Youthful\MVCxCheckBox.skin" />
+    <Content Include="App_Themes\Youthful\MVCxColorEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxComboBox.skin" />
+    <Content Include="App_Themes\Youthful\MVCxDateEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxDropDownEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxGridView.skin" />
+    <Content Include="App_Themes\Youthful\MVCxHtmlEditor.skin" />
+    <Content Include="App_Themes\Youthful\MVCxHyperLink.skin" />
+    <Content Include="App_Themes\Youthful\MVCxLabel.skin" />
+    <Content Include="App_Themes\Youthful\MVCxListBox.skin" />
+    <Content Include="App_Themes\Youthful\MVCxMemo.skin" />
+    <Content Include="App_Themes\Youthful\MVCxMenu.skin" />
+    <Content Include="App_Themes\Youthful\MVCxNavBar.skin" />
+    <Content Include="App_Themes\Youthful\MVCxPageControl.skin" />
+    <Content Include="App_Themes\Youthful\MVCxPopupControl.skin" />
+    <Content Include="App_Themes\Youthful\MVCxProgressBar.skin" />
+    <Content Include="App_Themes\Youthful\MVCxRadioButton.skin" />
+    <Content Include="App_Themes\Youthful\MVCxRadioButtonList.skin" />
+    <Content Include="App_Themes\Youthful\MVCxRoundPanel.skin" />
+    <Content Include="App_Themes\Youthful\MVCxSpinEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxSplitter.skin" />
+    <Content Include="App_Themes\Youthful\MVCxTabControl.skin" />
+    <Content Include="App_Themes\Youthful\MVCxTextBox.skin" />
+    <Content Include="App_Themes\Youthful\MVCxTimeEdit.skin" />
+    <Content Include="App_Themes\Youthful\MVCxTreeView.skin" />
+    <Content Include="App_Themes\Youthful\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Youthful\ReportToolbar.skin" />
+    <Content Include="App_Themes\Youthful\ReportViewer.skin" />
+    <Content Include="App_Themes\Youthful\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Youthful\WeekOfMonthEdit.skin" />
+    <None Include="Data\CatalogoArticulos\xdsData.xsc">
+      <DependentUpon>xdsData.xsd</DependentUpon>
+    </None>
+    <None Include="Data\CatalogoArticulos\xdsData.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>xdsData.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Data\CatalogoArticulos\xdsData.xss">
+      <DependentUpon>xdsData.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

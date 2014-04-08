@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="ControlAcc.master.cs" Inherits="ACCControlWeb.ControlAcc" %>
+<%@ Register Assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxSplitter" TagPrefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.ASPxEditors.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a"Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxRoundPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v10.2, Version=10.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxPanel" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.ASPxEditors.v10.2" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register assembly="DevExpress.Web.v10.2" namespace="DevExpress.Web.ASPxNavBar" tagprefix="dx" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Reporte de cobranza</title>    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <link rel="Stylesheet" href="Styles/reset.css" />
+        <link rel="Stylesheet" href="Styles/navegacion.css" />
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <dx:ASPxLabel ID="ASPxLabel2" runat="server" Text="Reporte de Cobranza" Font-Names="Tahoma" Font-Size="X-Large"></dx:ASPxLabel>
+        <div style="margin: 1em 0;">
+            <table>
+                <tr>
+                    <td style="padding-left:1em;"><dx:ASPxLabel ID="ASPxLabel1" runat="server" ClientIDMode="AutoID" Font-Bold="False" Text="Sucursal:   "></dx:ASPxLabel></td>
+                    <td style="padding-right:1em;">
+                        <dx:ASPxComboBox ID="cmbConexion" runat="server" AutoPostBack="True" 
+                            ClientIDMode="AutoID" CssFilePath="~/App_Themes/Office2010Blue/{0}/styles.css" 
+                            CssPostfix="Office2010Blue" Spacing="0" 
+                            SpriteCssFilePath="~/App_Themes/Office2010Blue/{0}/sprite.css" 
+                            ValueType="System.String" 
+                            onselectedindexchanged="cmbConexion_SelectedIndexChanged">
+                            <Items>
+                                <dx:ListEditItem Text="Abastecedora" Value="0" />
+                                <dx:ListEditItem Text="Heroico" Value="1" />
+                                <dx:ListEditItem Text="Libertad" Value="2" />
+                                <dx:ListEditItem Text="Fidel" Value="3" />
+                                <dx:ListEditItem Text="Winer" Value="4" />
+                                <dx:ListEditItem Text="Friolala" Value="5" />
+                                <dx:ListEditItem Text="FrioGomez" Value="6" />
+                            </Items>
+                            <LoadingPanelImage Url="~/App_Themes/Office2010Blue/Editors/Loading.gif"></LoadingPanelImage>
+                            <LoadingPanelStyle ImageSpacing="5px"></LoadingPanelStyle>
+                            <ButtonStyle Width="13px"></ButtonStyle>
+                        </dx:ASPxComboBox>
+                    </td>
+                </tr>
+            </table>     
+            <asp:ContentPlaceHolder ID="cphDataArea"  runat="server"></asp:ContentPlaceHolder>                              
+        </div>                                       
+    </form>
+</body>
+</html>
